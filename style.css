@@ -1,0 +1,70 @@
+.demo {
+  background: hsl(
+    var(--hue),
+    var(--saturation),
+    var(--lightness)
+  );
+  
+  border: solid 6px hsl(
+    var(--hue),
+    var(--saturation),
+    calc(30% + var(--lightness))
+  );
+}
+
+
+html {
+  --hue: 50;
+  --saturation: 50%;
+  --lightness: 50%;
+}
+
+body {
+  font-family: Lato;
+  padding: 1em;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+label {
+  display: inline-block;
+  width: 80px;
+  text-align: right;
+}
+
+input {
+  position: relative;
+  top: 3px;
+}
+
+.inputs {
+  margin-top: 1em;
+  margin-bottom: 2em;
+}
+
+.demo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  border-radius: 6px;
+  margin-left: 1em;
+}
+
+.demo span {
+  display: inline-block;
+  width: 60px;
+  background: white;
+  border-radius: 3px;
+  font-size: 0.8em;
+  padding: 3px;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: hsl(var(--hue), 75%, 25%);
+}
